@@ -348,6 +348,10 @@ dial-peer voice 82 Voip
  destination-pattern 82..
  session target ipv4:10.82.100.8
  codec g711ULAW
+dial-peer voice 91 Voip
+ destination-pattern 91..
+ session target ipv4:10.91.100.8
+ codec g711ULAW
 
 TASK3***TASK3***TASK3***
 TASK3***TASK3***TASK3***
@@ -603,33 +607,33 @@ conf t
 !
  voice register global
   mode cme
-  source-address 10._.100.8 port 5060
+  source-address 10.21.100.8 port 5060
   max-dn 12
   max-pool 12
   authenticate register
   create profile sync
  voice register dn 1
-   number ____
+   number 2171
    allow watch
-   name _______
- voice register dn 2
-   number ___
-   allow watch
-   name _______
+   name 2171
+! voice register dn 2
+ !  number ___
+  ! allow watch
+   !name _______
 !
   voice register pool 1
-    id mac ____.____.____
+    id mac 9238.a317.f692
     number 1 dn 1
     dtmf-relay sip-notify
-    username ____ password ____
+    username jeacueto24 password C1sc0123
     codec g711ulaw
 !
-  voice register pool 2
-    id mac ____.____.____
-    number 1 dn 2
-    dtmf-relay sip-notify
-    username ____ password ____
-    codec g711ulaw
+!  voice register pool 2
+ !   id mac ____.____.____
+ !   number 1 dn 2
+  !  dtmf-relay sip-notify
+  !  username jeacueto24 password C1sc0123
+  !  codec g711ulaw
 !
 *******call other countries!!!********
 config t
@@ -643,6 +647,7 @@ exit
           
 sip-ua
 sip-server ipv4:192.168.k.1
+
 
 
 
