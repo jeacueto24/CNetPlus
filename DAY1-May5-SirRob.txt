@@ -625,7 +625,7 @@ conf t
     id mac 9238.a317.f692
     number 1 dn 1
     dtmf-relay sip-notify
-    username jeacueto24 password C1sc0123
+    username 2171 password 2171
     codec g711ulaw
 !
 !  voice register pool 2
@@ -647,6 +647,7 @@ exit
           
 sip-ua
 sip-server ipv4:192.168.k.1
+
 
 
 
