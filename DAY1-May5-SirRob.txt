@@ -604,7 +604,7 @@ conf t
    bind control source-interface fa0/0
    bind media source-interface fa0/0
    registrar server expires max 600 min 60
-!
+
  voice register global
   mode cme
   source-address 10.21.100.8 port 5060
@@ -616,24 +616,24 @@ conf t
    number 2171
    allow watch
    name 2171
-! voice register dn 2
- !  number ___
-  ! allow watch
-   !name _______
+ voice register dn 2
+   number 2172
+   allow watch
+   name 2172
 !
   voice register pool 1
-    id mac 9238.a317.f692
+    id mac 3050.ce15.0b3c
     number 1 dn 1
     dtmf-relay sip-notify
     username 2171 password 2171
     codec g711ulaw
 !
-!  voice register pool 2
- !   id mac ____.____.____
- !   number 1 dn 2
-  !  dtmf-relay sip-notify
-  !  username jeacueto24 password C1sc0123
-  !  codec g711ulaw
+  voice register pool 2
+    id mac bc0e.ab01.0c2f
+    number 1 dn 2
+    dtmf-relay sip-notify
+    username 2172 password 2172
+    codec g711ulaw
 !
 *******call other countries!!!********
 config t
@@ -647,6 +647,7 @@ exit
           
 sip-ua
 sip-server ipv4:192.168.k.1
+
 
 
 
