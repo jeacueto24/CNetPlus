@@ -616,10 +616,10 @@ conf t
    number 2171
    allow watch
    name 2171
- voice register dn 2
-   number 2172
-   allow watch
-   name 2172
+! voice register dn 2
+!   number 2172
+!   allow watch
+!   name 2172
 !
   voice register pool 1
     id mac 3050.ce15.0b3c
@@ -628,12 +628,12 @@ conf t
     username 2171 password 2171
     codec g711ulaw
 !
-  voice register pool 2
-    id mac bc0e.ab01.0c2f
-    number 1 dn 2
-    dtmf-relay sip-notify
-    username 2172 password 2172
-    codec g711ulaw
+ ! voice register pool 2
+ !   id mac bc0e.ab01.0c2f
+ !   number 1 dn 2
+ !   dtmf-relay sip-notify
+ !   username 2172 password 2172
+ !   codec g711ulaw
 !
 *******call other countries!!!********
 config t
@@ -647,6 +647,7 @@ exit
           
 sip-ua
 sip-server ipv4:192.168.k.1
+
 
 
 
